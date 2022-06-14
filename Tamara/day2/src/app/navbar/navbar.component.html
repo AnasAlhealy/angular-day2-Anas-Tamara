@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark text-align">
+    <div class="p-3 container-fluid d-flex justify-content-center">
+      <a class="navbar-brand" href="#">RENT</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-5 mb-3 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Contact</a>
+          </li>
+        </ul>
+        <div class="justify-content-end">
+            <button class="btn btn-danger" style="width: 130%;" (click)="clickCounter()">Donate 10€</button>
+        </div>
+        
+        <div class=" container-fluid d-flex justify-content-center text-light">
+            <ng-template [ngIf]="counter >= 200" [ngIfElse]="nichts">
+                <p id="vip" class="bg-success p-2">You are "VIP"</p>
+            </ng-template>
+    
+            <ng-template #nichts>
+                <p id="vip" class="bg-danger p-2">{{counter}} €
+                </p>
+            </ng-template>
+        </div>
+        
+      </div>
+    </div>
+  </nav>
